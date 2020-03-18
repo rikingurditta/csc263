@@ -3,7 +3,7 @@
 ## Graphs
 
 - $G = (V, E)$ where $V$ is a set of vertices and $E$ is a set of edges $(v_1, v_2)$ where $v_1, v_2 \in V$
-- typically, $n = |V|$ and $m = |E|$
+- typically, $n = \vert V\vert $ and $m = \vert E\vert $
 - typically, elements of $V$ are written as natural numbers
 
 ### Types of graphs
@@ -66,7 +66,7 @@ def BFS(G, s):
 
 ### Time complexity
 
-BFS is $\mathcal O(|V| + |E|)$ since each node needs to be discovered, and for each node every edge needs to be checked
+BFS is $\mathcal O(\vert V\vert  + \vert E\vert )$ since each node needs to be discovered, and for each node every edge needs to be checked
 
 ### Discovery path
 

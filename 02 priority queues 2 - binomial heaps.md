@@ -79,7 +79,7 @@ A min binomial heap is a binomial forest where:
 3. if there are $B_k$ trees with same size in both, merge them to get a $B_{k+1}$ tree
 4. carry the new $B_{k+1}$ tree, repeat from step 2
 
-for $|A| \leq n$ and $|B| \leq n$, the complexity of `union(A, B)` is $\mathcal O(\log(n))$
+for $\vert A \vert  \leq n$ and $\vert B \vert  \leq n$, the complexity of `union(A, B)` is $\mathcal O(\log(n))$
 
 #### `insert(A, x)`
 

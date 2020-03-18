@@ -29,7 +29,7 @@ def Kruskal(G):
     H = heap containing (e, w(e)) for each e in E
     S = disjoint set forest containing each v in V
     F = empty set  # trivial partial solution
-    while |F| < n - 1:
+    while |F|  < n - 1:
         # greedily extend partial solution
         (u, v) = ExtractMin(H)  # find least weight edge
         # insert if u and v are not already connected
@@ -97,5 +97,5 @@ Let $S$  be the set of nodes that are connected by $F_k$ and $\overline S = V \s
 
 #### Conclusion
 
-Since the loop invariant is true for every iteration, it is true when $|F| = n - 1$ aka when the loop terminates. Since $|F| = n - 1$, the resulting graph must be a spanning tree, so $F$ details a minimum spanning tree of $G$.
+Since the loop invariant is true for every iteration, it is true when $\vert F\vert  = n - 1$ aka when the loop terminates. Since $\vert F\vert  = n - 1$, the resulting graph must be a spanning tree, so $F$ details a minimum spanning tree of $G$.
 

@@ -6,18 +6,18 @@ Another implementation for the dictionary ADT, but has (under suitable assumptio
 
 - the universe: $U = \{ k : k \text{ is a possible key} \}$
 - keys in use: $K = \{ k : k \text{ is used to store something} \}$
-  - size of the dictionary is $n = |K|$
+  - size of the dictionary is $n = \vert K\vert $
 
 ## Naive Implementation - Direct Addressing
 
-Have an array `S` of size $|U|$, then for a key $k \in \{ 0, ..., |U| - 1 \}$, store its value in `S[k]`, or if that key is not present, store  a flag in `S[k]` marking it empty
+Have an array `S` of size $\vert U\vert $, then for a key $k \in \{ 0, ..., \vert U\vert  - 1 \}$, store its value in `S[k]`, or if that key is not present, store  a flag in `S[k]` marking it empty
 
-e.g. if $|U| = 4$ and we `insert(2, 1)`, then `arr = [-, -, 1, -]`
+e.g. if $\vert U\vert  = 4$ and we `insert(2, 1)`, then `arr = [-, -, 1, -]`
 
-### But what if $|U|$ is too big?
+### But what if $\vert U\vert $ is too big?
 
-- what if $|U|$ is too big for an array of its size to be stored
-- what if $|U| >> |K|$ , so an array of size $|U|$ would be incredibly wasteful
+- what if $\vert U\vert $ is too big for an array of its size to be stored
+- what if $\vert U\vert  >> \vert K\vert $ , so an array of size $\vert U\vert $ would be incredibly wasteful
 
 ## Hash Functions
 
@@ -37,7 +37,7 @@ Don't worry about actual hash functions, they are mysterious.
 
 ### Collisions
 
-If $h : U \to K$ and $|K| < |U|$, then $h$ cannot be injective, so there could be a *collision*: two different keys share the same hash
+If $h : U \to K$ and $\vert K\vert  < \vert U\vert $, then $h$ cannot be injective, so there could be a *collision*: two different keys share the same hash
 
 **Solutions**:
 

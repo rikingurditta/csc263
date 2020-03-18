@@ -17,7 +17,7 @@ Given a data structure and some operations, let $T(n)$ be the sum of upper bound
 
 ### Aggregate method
 
-Using a bit array $A$, $k = |A|$,
+Using a bit array $A$, $k = \vert A\vert $,
 
 ```python
 def Increment(A):

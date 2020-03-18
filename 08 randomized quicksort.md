@@ -43,7 +43,7 @@ note that $z_i$ and $z_{i+1}$ are always compared because there is no pivot betw
 
 let $Z_{ij} = z_i, z_{i+1}, ..., z_{j}$
 
-consider the first time $p$ is chosen from $Z_{ij}$ (must happen because $|Z_{ij}| > 1$)
+consider the first time $p$ is chosen from $Z_{ij}$ (must happen because $\vert Z_{ij}\vert  > 1$)
 
 **Case 1**: $z_i < p < z_j$, so they are separated into different partitions
 
@@ -51,7 +51,7 @@ consider the first time $p$ is chosen from $Z_{ij}$ (must happen because $|Z_{ij
 
 **Case 2**: $z_i = p$ or $z_j = p$
 
-- probability $\displaystyle \frac{2}{|Z_{ij}|} = \frac{2}{j - i + 1}$
+- probability $\displaystyle \frac{2}{\vert Z_{ij}\vert } = \frac{2}{j - i + 1}$
 - since the $p$ is compared against every value in $Z_{ij}$, $z_i$ and $z_j$ get compared in this case
 
 #### Proof of average case running time

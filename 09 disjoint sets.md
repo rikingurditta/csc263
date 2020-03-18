@@ -22,7 +22,7 @@ Let $\sigma$ be the procedure of $n - 1$ `union`s and $m \geq n$ `find`s
 
 - each element stores pointer to its representative
   - this way, `find` is fast
-- `union` is slow because it must now change $\mathcal O(min(|S_1|, |S_2|))$ pointers to the new representative
+- `union` is slow because it must now change $\mathcal O(min(\vert S_1\vert , \vert S_2\vert ))$ pointers to the new representative
 
 ## Forest (tree-like)
 
@@ -40,7 +40,7 @@ To do `union`, make root of smaller tree point to root of larger tree
 
 #### Lemma
 
-With weighted union, any tree $T$ of height $h$ created during the execution of $\sigma$ has $|T| \geq 2^h$
+With weighted union, any tree $T$ of height $h$ created during the execution of $\sigma$ has $\vert T\vert  \geq 2^h$
 
 **Proof.**
 
@@ -54,11 +54,11 @@ Suppose lemma holds for some $h \geq 0$.
 
 To construct a tree of height $h+1$, we make the root of a tree $A$ of height $h$ point to the root of a bigger tree $B$ (because we are using weighted union)
 
-By IH, $|A| \geq 2^h$
+By IH, $\vert A\vert  \geq 2^h$
 
-By WU rule, $|B| \geq |A| \geq 2^h$
+By WU rule, $\vert B\vert  \geq \vert A\vert  \geq 2^h$
 
-Then resulting tree has number of nodes $|A| + |B| \geq 2 (2^h) = 2^{h + 1}$
+Then resulting tree has number of nodes $\vert A\vert  + \vert B\vert  \geq 2 (2^h) = 2^{h + 1}$
 
 ### Path compression
 
