@@ -1,3 +1,5 @@
+[Back to index](index)
+
 # Balanced Binary Search Trees - AVL Trees
 
 *"Symmetry is reallly important to preserve laziness."*

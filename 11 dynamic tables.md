@@ -1,3 +1,5 @@
+[Back to index](index)
+
 # Dynamic Tables
 
 table `T`, $\vert T\vert $ denotes max number of items that can be stored

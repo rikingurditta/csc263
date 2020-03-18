@@ -1,3 +1,5 @@
+[Back to index](index)
+
 # Priority Queues
 
 - set S of elements with "keys" (priority) that can be compared

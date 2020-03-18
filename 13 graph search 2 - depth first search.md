@@ -1,3 +1,5 @@
+[Back to index](index)
+
 # Depth-First Search
 
 - BFS: first discovered -> first explored

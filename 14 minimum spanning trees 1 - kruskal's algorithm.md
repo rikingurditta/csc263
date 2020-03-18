@@ -1,3 +1,5 @@
+[Back to index](index)
+
 # Kruskal's Algorithm
 
 ## Minimum Spanning Trees

@@ -1,3 +1,5 @@
+[Back to index](index)
+
 # Dictionaries
 
 Represents a (mutable) set $S$ of elements with keys

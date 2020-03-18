@@ -1,3 +1,5 @@
+[Back to index](index)
+
 # Hash Tables
 
 Another implementation for the dictionary ADT, but has (under suitable assumptions) constant time operations

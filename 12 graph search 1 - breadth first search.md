@@ -1,3 +1,5 @@
+[Back to index](index)
+
 # Breadth-First Search
 
 ## Graphs

@@ -1,3 +1,5 @@
+[Back to index](index)
+
 # Amortized Analysis
 
 Given a data structure and some operations, let $T(n)$ be the sum of upper bounds on worst case runtimes for $n$ operations

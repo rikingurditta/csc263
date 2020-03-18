@@ -1,3 +1,5 @@
+[Back to index](index)
+
 # Mergable Priority Queues
 
 - what if we wanted to merge two priority queues?
