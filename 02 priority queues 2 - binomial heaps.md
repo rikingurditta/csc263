@@ -23,9 +23,9 @@
 
 #### $B_k$ Trees defined recursively:
 
-0. <img src="/Users/rikin/Documents/School Stuff/2019-2020/csc263/lectures/b0 bin tree.png" alt="image-20200113154011982" style="zoom: 50%;" />
-1. <img src="/Users/rikin/Documents/School Stuff/2019-2020/csc263/lectures/b1 bin tree.png" alt="image-20200113154031726" style="zoom:50%;" />
-2. <img src="/Users/rikin/Documents/School Stuff/2019-2020/csc263/lectures/b2 bin tree.png" alt="image-20200113154045009" style="zoom:50%;" />
+0. <img src="b0 bin tree.png" alt="image-20200113154011982" style="zoom: 50%;" />
+1. <img src="b1 bin tree.png" alt="image-20200113154031726" style="zoom:50%;" />
+2. <img src="b2 bin tree.png" alt="image-20200113154045009" style="zoom:50%;" />
 
 In general, create $B_{n+1}$ tree by taking two $B_n$ trees, $A$ and $B$ and making the root of $B$ the first child of the root of $A$
 

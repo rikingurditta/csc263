@@ -69,11 +69,11 @@ Before:
 
 `find(S, x)` traverses from `x` to `root`
 
-<img src="/Users/rikin/Documents/School Stuff/2019-2020/csc263/lectures/path compression before.png" style="zoom:50%;" />
+<img src="path compression before.png" style="zoom:50%;" />
 
 After:
 
-<img src="/Users/rikin/Documents/School Stuff/2019-2020/csc263/lectures/path compression after.png" alt="image-20200214005653612" style="zoom:50%;" />
+<img src="path compression after.png" alt="image-20200214005653612" style="zoom:50%;" />
 
 - this does not increase complexity, as same nodes must be operated on twice, aka a constant factor difference
 - speeds up subsequent calls to `find` on `x` or any of its ancestors - becomes constant time
