@@ -12,11 +12,11 @@
   - a connected graph with $n$ vertices and $n-1$ edges is a tree
   - adding one edge to a tree creates a unique cycle, deleting any edge from the cycle creates a tree
 - a spanning tree $T$ of $G$ is a tree which contains every vertex in $V$ and has a subset of $G$'s edges so that it is a tree - $T = (V, E')$, $E' \subseteq E$
-- the weight of a graph $G = (V, E)$ is $w(G) = \displaystyle \sum_{e \in E} w(e)$
+- given a weight function $wt: E \to \mathbb R$, the weight of a graph $G = (V, E)$ is $wt(G) = \displaystyle \sum_{e \in E} wt(e)$
 
 ### Minimum Spanning Tree problem
 
-Given an undirected connected graph $G = (V, E)$ and a weight function $w : E \to \mathbb R$ (do not require weights to be non-negative), find a minimum weight spanning tree of $G$.
+Given an undirected connected graph $G = (V, E)$ and a weight function $wt : E \to \mathbb R$ (do not require weights to be non-negative), find a minimum weight spanning tree of $G$.
 
 - a complete graph with $n$ vertices has $n^{n-2}$ spanning trees, so calculating the weight of each spanning tree and choosing the minimum weight would be ridiculously slow
 - problem was originally solved by engineers deciding how to connect a power grid
@@ -28,7 +28,7 @@ Given an undirected connected graph $G = (V, E)$ and a weight function $w : E \t
 
 ```python
 def Kruskal(G):
-    H = heap containing (e, w(e)) for each e in E
+    H = heap containing (e, wt(e)) for each e in E
     S = disjoint set forest containing each v in V
     F = empty set  # trivial partial solution
     while |F|  < n - 1:
@@ -72,11 +72,11 @@ If $e \notin T$, then adding $e$ to $T$ creates a unique cycle in $T$. This cycl
 
 Let $T' = (T \cup \{e\}) \setminus \{e' \}$, then $T$ must still be a spanning tree.
 
-$w(T') = w(T) + w(e) - w(e')$
+$wt(T') = wt(T) + wt(e) - wt(e')$
 
-$e$ was a minimum weight edge crossing the cut and $e'$ was another edge crossing the cut, so $w(e) \leq w(e')$, so $w(T') \leq w(T)$
+$e$ was a minimum weight edge crossing the cut and $e'$ was another edge crossing the cut, so $wt(e) \leq wt(e')$, so $wt(T') \leq wt(T)$
 
-$T$ is an MST of G and $w(T') \leq w(T)$, so $T'$ must also be an MST of G
+$T$ is an MST of G and $wt(T') \leq wt(T)$, so $T'$ must also be an MST of G
 
 #### Loop Invariant
 
