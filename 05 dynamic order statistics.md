@@ -31,8 +31,8 @@ Note that `select` and `rank` are inverses!
 At each node $x$, store the rank of $x$
 
 - good for:
-  - `select`: can go down the tree in $\Theta O(h)$ time to find the $k^\text{th}$ element
-  - `rank`: $x$ stores its rank, so this takes $\Theta O(1)$ time
+  - `select`: can go down the tree in $\Theta (h)$ time to find the $k^\text{th}$ element
+  - `rank`: $x$ stores its rank, so this takes $\Theta (1)$ time
 - bad for:
   - `insert`, `delete`: these change order, which means that many ($\Theta (n)$) stored ranks must be changed
 
