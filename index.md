@@ -12,3 +12,5 @@
 12. [Graph Search 1 - Breadth First Search](12 graph search 1 - breadth first search)
 13. [Graph Search 2 - Depth First Search](13 graph search 2 - depth first search)
 14. [Minimum Spanning Trees 1 - Kruskal's Algorithm](14 minimum spanning trees 1 - kruskal's algorithm)
+15. [Minimum Spanning Trees 2 - Prim's Algorithm](15 minimum spanning trees 2 - prim's algorithm)
+
