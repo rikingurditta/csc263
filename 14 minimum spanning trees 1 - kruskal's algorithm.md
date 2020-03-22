@@ -60,7 +60,7 @@ a cut of $G = (V, E)$ is a partition of $V$ into $S \subseteq V$ and $\overline 
 
 ##### Cut property
 
-Suppose $F \subseteq E$ is contained in some MST of $G$ ($F$ is a partial solution for the MST), $(S, \overline S)$ is a cut of $G$ so that no edge in $F$ crosses the cut, and $e$ is a minimum weight edge which crosses $(S, \overline S)$. Then $F \cup \{e\}$ is contained in some MST of $G$.
+Suppose $F \subseteq E$ is contained in some MST of $G$ ($F$ is a partial solution for the MST), $(S, \overline S)$ is a cut of $G$ so that no edge in $F$ crosses the cut, and $e$ is a minimum weight edge which crosses $(S, \overline S)$. Then $F \cup \lbrace e \rbrace$ is contained in some MST of $G$.
 
 Proof.
 
@@ -70,7 +70,7 @@ If $e \in T$, then we are done.
 
 If $e \notin T$, then adding $e$ to $T$ creates a unique cycle in $T$. This cycle contains $e' \neq e$ that crosses the cut. This is because if $e = (u, v)$ and $e$ is part of a cycle, then there must be another path from $u$ to $v$, which must cross the cut some other way.
 
-Let $T' = (T \cup \{e\}) \setminus \{e' \}$, then $T$ must still be a spanning tree.
+Let $T' = (T \cup \lbrace e \rbrace) \setminus \lbrace e' \rbrace$, then $T$ must still be a spanning tree.
 
 $wt(T') = wt(T) + wt(e) - wt(e')$
 
@@ -93,7 +93,7 @@ $F_0$ is empty, so it has no cycles and is contained in every MST.
 
 Suppose $F_k$ has no cycles and is contained in some MST.
 
-$F_k = F_{i+1} \cup \{e\}$ and $e$ was chosen so that $F_{k+1}$ does not have any cycles, so $F_{k+1}$ has no cycles.
+$F_k = F_{i+1} \cup \lbrace e \rbrace$ and $e$ was chosen so that $F_{k+1}$ does not have any cycles, so $F_{k+1}$ has no cycles.
 
 Let $S$  be the set of nodes that are connected by $F_k$ and $\overline S = V \setminus S$, then $e \in \overline S$. $e$ crosses this cut, and it was chosen to be a minimum-weight edge^[citation^ ^needed]^, so $F_{k+1}$ is also contained in an MST.
 

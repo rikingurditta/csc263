@@ -6,13 +6,13 @@ Another implementation for the dictionary ADT, but has (under suitable assumptio
 
 ## Relevant sets
 
-- the universe: $U = \{ k : k \text{ is a possible key} \}$
-- keys in use: $K = \{ k : k \text{ is used to store something} \}$
+- the universe: $U = \lbrace k : k \text{ is a possible key} \rbrace$
+- keys in use: $K = \lbrace k : k \text{ is used to store something} \rbrace$
   - size of the dictionary is $n = \vert K\vert $
 
 ## Naive Implementation - Direct Addressing
 
-Have an array `S` of size $\vert U\vert $, then for a key $k \in \{ 0, ..., \vert U\vert  - 1 \}$, store its value in `S[k]`, or if that key is not present, store  a flag in `S[k]` marking it empty
+Have an array `S` of size $\vert U\vert $, then for a key $k \in \lbrace 0, ..., \vert U\vert  - 1 \rbrace$, store its value in `S[k]`, or if that key is not present, store  a flag in `S[k]` marking it empty
 
 e.g. if $\vert U\vert  = 4$ and we `insert(2, 1)`, then `arr = [-, -, 1, -]`
 
@@ -25,7 +25,7 @@ e.g. if $\vert U\vert  = 4$ and we `insert(2, 1)`, then `arr = [-, -, 1, -]`
 
 **A hash function maps a large set of inputs to a small set of things to use as keys**
 
-If we have an array `S` of size $m$, we can use a hash function $h : U \to \{ 0, ..., m - 1 \}$ to "hash" keys into places in `S`
+If we have an array `S` of size $m$, we can use a hash function $h : U \to \lbrace 0, ..., m - 1 \rbrace$ to "hash" keys into places in `S`
 
 ------
 
@@ -61,11 +61,11 @@ If $h : U \to K$ and $\vert K\vert  < \vert U\vert $, then $h$ cannot be injecti
 
 ### SUHA - Simple Uniform Hashing Assumption
 
-We assume that $h(k)$ is equally likely to take on all values in $\{0, ..., m-1 \}$
+We assume that $h(k)$ is equally likely to take on all values in $\lbrace 0, ..., m-1 \rbrace$
 
 #### Application to chaining
 
-SUHA is equivalent to assuming that $\forall i, j \in \{0, ..., m - 1 \}, n_i = n_j$ where $n_x$ is the number of keys that are hashed to $x$
+SUHA is equivalent to assuming that $\forall i, j \in \lbrace 0, ..., m - 1 \rbrace, n_i = n_j$ where $n_x$ is the number of keys that are hashed to $x$
 
 $\displaystyle \sum_{i = 0}^{m - 1} E[n_i] = n$, and by SUHA all $n_i \approx n_j$, so each $\displaystyle n_i \approx \frac{n}{m}$ (we call $\alpha = n / m$ the *load factor*)
 
