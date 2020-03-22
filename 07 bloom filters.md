@@ -23,7 +23,7 @@ kind of a "probabilistic dictionary"
 
 - $t$ independent hash functions $h_1, h_2, ..., h_t$
 
-  - $h_i : U \to \{ 0, 1, ..., m-1 \}$
+  - $h_i : U \to \lbrace 0, 1, ..., m-1 \rbrace$
   - $h_i$ conforms to simple uniform hashing assumption
 
 - `insert(S, x)`
