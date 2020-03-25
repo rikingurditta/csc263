@@ -22,7 +22,6 @@ Suppose the list has size $n$
 
 - here, $1$, $2$, and $3$ represent the first, second, and third keys in the list that the algorithm deals with
 - the output of the algorithm is a permutation of the input so that it is in sorted order, so the leaves of the decision tree are all of the permutations of the list
-
 - any binary tree with $\ell$ leaves has height $h \geq \lceil \log_2(\ell) \rceil$
 - a sorting decision tree $T_n$ for $n$ keys has at least $n!$ leaves, as the leaves are permutations and there are $n!$ permutations, therefore $height(T_n) \geq \lceil \log_2(n!) \rceil$, so $height(T_n) \in \Omega(n\log(n))$
 - the height of a decision tree is the length of the longest path from root to leaf, aka the number of decisions in the worst case
