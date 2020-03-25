@@ -14,4 +14,5 @@
 14. [Minimum Spanning Trees 1 - Kruskal's Algorithm](14 minimum spanning trees 1 - kruskal's algorithm)
 15. [Minimum Spanning Trees 2 - Prim's Algorithm](15 minimum spanning trees 2 - prim's algorithm)
 16. [Metric Travelling Salesman Problem Approximation via MSTs](16 travelling salesman approximation)
+17. [Lower Bounds on Sorting with Decision Trees](17 sorting lower bounds)
 
