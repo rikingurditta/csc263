@@ -42,13 +42,14 @@ for $n$ increments:
 - $A[2]$ flips $\lfloor n/4 \rfloor$ times
 - in general, $A[i]$ flips $\lfloor n/2^i \rfloor$ times
 
-$\displaystyle T(n) = \sum_{i=0}^{k-1} \lfloor n/2^i \rfloor$
-
-$\displaystyle \leq \sum_{i=0}^{k-1} n/2^i$
-
-$\displaystyle \leq n \sum_{i=0}^{\infty} 2^{-i}$
-
-$\displaystyle = 2n$
+$$
+\begin{align*}
+T(n) &= \sum_{i=0}^{k-1} \lfloor n/2^i \rfloor \\
+&\leq \sum_{i=0}^{k-1} n/2^i \\
+&\leq n \sum_{i=0}^{\infty} 2^{-i} \\
+&= 2n
+\end{align*}
+$$
 
 So the amortized cost is $2n/n = 2$
 

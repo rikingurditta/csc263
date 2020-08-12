@@ -27,7 +27,7 @@ def rqs(S):
 
 - keys $k_1, k_2$ are only compared if one of them is the pivot for their partition
 - keys are compared at most once
-  - as a result, $RQS$ makes at most $\displaystyle {n \choose 2}$ comparisons, so it runs in $\mathcal O(n^2)$ time
+  - as a result, $RQS$ makes at most $\displaystyle \binom{n}{2}$ comparisons, so it runs in $\mathcal O(n^2)$ time
   - worst case actually is $O(n^2)$ time
 - if keys end up in different partitions, they are never compared
 
@@ -56,17 +56,21 @@ consider the first time $p$ is chosen from $Z_{ij}$ (must happen because $\vert 
 
 #### Proof of average case running time
 
-$\displaystyle E(C) = E \left( \sum_{1 \leq i < j \leq n} c_{ij} \right) = \sum_{1 \leq i < j \leq n} E(c_{ij})$
-
-​		$\displaystyle = \sum_{i = 1}^{n-1} \sum_{j = i + 1}^n \frac{2}{j - i + 1}$ (by lemma)
+$$
+\begin{align*}
+E(C) &= E \left( \sum_{1 \leq i < j \leq n} c_{ij} \right) \\
+&= \sum_{1 \leq i < j \leq n} E(c_{ij}) \\
+&= \sum_{i = 1}^{n-1} \sum_{j = i + 1}^n \frac{2}{j - i + 1} \tag{by lemma}
+\end{align*}
+$$
 
 let $k = j - i$, then
 
-​		$\displaystyle= 2 \sum_{i = 1}^{n-1} \sum_{k = 1}^{n - i} \frac{1}{k + 1}$
-
-​		$\displaystyle \leq 2 \sum_{i = 1}^{n} \sum_{k = 1}^{n} \frac{1}{k}$
-
-​		$\displaystyle \leq 2\sum_{i=1}^n H_n$ ($H_n$ is the $n^\text{th}$ harmonic number)
-
-​		$\in \mathcal O(n \log(n))$
-
+$$
+\begin{align*}
+&= 2 \sum_{i = 1}^{n-1} \sum_{k = 1}^{n - i} \frac{1}{k + 1} \\
+&\leq 2 \sum_{i = 1}^{n} \sum_{k = 1}^{n} \frac{1}{k} \\
+&\leq 2\sum_{i=1}^n H_n \tag{$H_n$ is the $n^\text{th}$ harmonic number} \\
+&\in \mathcal O(n \log(n))
+\end{align*}
+$$

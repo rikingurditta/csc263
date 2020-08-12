@@ -52,21 +52,24 @@ kind of a "probabilistic dictionary"
 
 If $n$ is the number of insertions, $t$ is the number of hash functions, $m$ is the size of $BF$
 
-$\displaystyle P(BF[i] = 0) = P\left( \bigcap_{k=1}^n \bigcap_{j=1}^t h_j(x_k) \neq 1 \right)$
-
-​		$\displaystyle = \prod_{k=1}^n \prod_{j=1}^t P( h_j(x_k) \neq 1)$
-
-​		$= (1 - 1/m)^{nt}$
-
-​		$\approx (e^{-1/m})^{nt} = e^{-nt/m}$
+$$
+\begin{align*}
+P(BF[i] = 0) &= P\left( \bigcap_{k=1}^n \bigcap_{j=1}^t h_j(x_k) \neq 1 \right) \\
+&= \prod_{k=1}^n \prod_{j=1}^t P( h_j(x_k) \neq 1) \\
+&= (1 - 1/m)^{nt} \\
+&\approx (e^{-1/m})^{nt} = e^{-nt/m}
+\end{align*}
+$$
 
 Let $q = P(BF[i] = 1) = 1 - e^{-nt/m}$
 
-$P(\text{false positive}) = P(BF[h_1(x)] = 1 \cap BF[h_2(x)] = 1\;\cap\; ...\; \cap\; BF[h_t(x)] = 1)$
-
-​		$\approx P(BF[h_1(x)] = 1) \cdot P(BF[h_2(x)] = 1)\; \cdot\; ...\; \cdot\; P(BF[h_t(x)] = 1)$
-
-​		$= q^t = (1 - e^{-nt/m})^t$
+$$
+\begin{align*}
+P(\text{false positive}) &= P(BF[h_1(x)] = 1 \cap BF[h_2(x)] = 1\;\cap\; ...\; \cap\; BF[h_t(x)] = 1) \\
+&\approx P(BF[h_1(x)] = 1) \cdot P(BF[h_2(x)] = 1)\; \cdot\; ...\; \cdot\; P(BF[h_t(x)] = 1) \\
+&= q^t = (1 - e^{-nt/m})^t
+\end{align*}
+$$
 
 Using calculus, to minimize $P(\text{false positive})$, we should choose $\displaystyle t = \frac{m \ln 2}{n} \approx 0.69 \frac{m}{n}$
 
